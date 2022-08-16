@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*Header*/
+.header{
+    max-width: 100%;
+    height: 100vh;
+    background: url("../img/header.png") no-repeat;
+    object-fit: cover;
+}
+
+.header-up{
+    width: 100%;
+    height: 80px;
+    float: right;
+    overflow: hidden;
+}
