@@ -6,6 +6,15 @@
     text-decoration: none;
 }
 
+img{
+    max-width: 100%;
+}
+
+:root{
+    --color-green: #019392;
+    --color-yellow: #FFC013;
+}
+
 /*Header*/
 .header{
     max-width: 100%;
@@ -16,6 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    margin-bottom: 150px;
 }
 
 .cards-header{
@@ -29,12 +39,12 @@
 }
 
 .cards-header .card{
-    box-shadow: -5px -5px 0 yellow;
-    
+    box-shadow: -5px -5px 0 var(--color-yellow);
+    transition: .5s linear;
 }
 .cards-header .card:hover{
-    transform: rotate(5deg);
-    transition: .5s linear ;
+    transform: rotate(2deg);
+    animation: tremer .2s ease-in-out;
 }
 
 .cards-header .card:nth-child(1){
@@ -52,6 +62,96 @@
     background-position: center 30%;
     background-size: cover;
 }
+
+
+/*Sinopse*/
+.sinopse-container{
+    padding: 2rem 4rem;
+    background: var(--color-green);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    'img text';
+    margin-bottom: 150px;
+}
+
+.img-sinopse{
+    grid-area: img;
+    position: relative;
+}
+
+.img-sinopse h2{
+    width: max-content;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    border: 2px solid #fff;
+    color: #fff;
+    transition:background .5s linear;
+}
+.img-sinopse h2:hover{
+    background: #fff;
+    color: var(--color-green);
+}
+
+.text-sinopse{
+    grid-area: text;
+    margin-top: 100px;
+}
+
+.text-sinopse p{
+    max-width: 70%;
+    float: right;
+    color: #fff;
+    text-shadow: -2px 2px 5px #000;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+    text-align: right;
+    letter-spacing: 4px;
+    line-height: 1.2;
+}
+
+/*Estreia*/
+.estreia-container{
+    padding: 2rem 4rem;
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px;
+}
+
+.banner-estreia{
+    background: url('../img/banner-anime.png') no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+    box-shadow: -5px +5px 0 var(--color-green);
+    border: 1px solid var(--color-green);
+}
+.banner-estreia:hover{
+    animation: tremer .2s ease-in-out;
+}
+
+@keyframes tremer{
+    0% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: 15px;
+    }
+    50% {
+        margin-left: 0;
+    }
+    75% {
+        margin-left: -15px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
 
 
 
